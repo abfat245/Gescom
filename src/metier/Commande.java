@@ -59,7 +59,7 @@ public class Commande {
      */
     public void supprimerLigne(Ligne ligneASupprimer) {
         if (lesLignes != null && lesLignes.contains(ligneASupprimer)) {
-            lesLignes.remove(ligneASupprimer);  // Supprime la ligne de la liste
+            lesLignes.remove(ligneASupprimer);
         }
     }
     
@@ -73,7 +73,7 @@ public class Commande {
     public Ligne chercherLigne(int idArticle, BdD bdd) {
         for (Ligne ligne : lesLignes) {
             if (ligne.getArticle().getIdArticle() == idArticle) {
-                return ligne;  // Retourne la ligne si l'article est trouvé
+                return ligne;
             }
         }
         return null;
@@ -88,7 +88,7 @@ public class Commande {
     public double valoriserCommande() {
         double totalHT = 0.0;
         for (Ligne ligne : lesLignes) {
-            totalHT += ligne.getArticle().getPrix() * ligne.getQteCommande();  // Calcul du total HT
+            totalHT += ligne.getArticle().getPrix() * ligne.getQteCommande();
         }
         return totalHT;
     }

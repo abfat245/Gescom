@@ -3,6 +3,7 @@ package metier;
 import java.util.*;
 import metier.Tva;
 import metier.Famille;
+import dao.BdD;
 
 public class Article {
 
@@ -52,5 +53,4 @@ public class Article {
         this.uneTva = uneTva;
         this.uneFamille = uneFamille;
     }
-
 }
